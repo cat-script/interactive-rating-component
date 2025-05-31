@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+  </head>
+
+  <body>
+
+    <main class="container">
+      <!-- Rating state start -->
+      <form class="rating-state grid" autocomplete="off">
+        <div>
+          <div class="icon circle"><img src="./images/icon-star.svg" alt=""></div>
+          <h2>How did we do?</h2>
+          <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+        <div class="ratings flex">
+          <div>
+            <input id="1" value="1" type="radio" name="rate">
+            <label for="1"><span class="circle">1</span></label>
+          </div>
+          <div>
+            <input id="2" value="2" type="radio" name="rate">
+            <label for="2"><span class="circle">2</span></label>
+          </div>
+          <div>
+            <input id="3" value="3" type="radio" name="rate">
+            <label for="3"><span class="circle">3</span></label>
+          </div>
+          <div>
+            <input id="4" value="4" type="radio" name="rate">
+            <label for="4"><span class="circle">4</span></label>
+          </div>
+          <div>
+            <input id="5" value="5" type="radio" name="rate">
+            <label for="5"><span class="circle">5</span></label>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div class="thankyou-state grid hidden">
+        <div><img src="./images/illustration-thank-you.svg" alt=""></div>
+        <div class="user-submit flex">You selected
+          <pre class="user-rated"></pre>out of 5
+        </div>
+        <div>
+          <h2>Thank you!</h2>
+          <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+
+  </body>
+
+</html>

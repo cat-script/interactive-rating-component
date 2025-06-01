@@ -94,7 +94,7 @@ input {
     background-color: var(--primary);
   }
 
-  &:is(:hover, :checked, :focus)+label span {
+  &:is(:hover, :checked, :focus-visible)+label span {
     color: var(--very-dark-blue-hsl);
   }
 }
@@ -124,7 +124,7 @@ input {
   border-radius: 100vw;
   cursor: pointer;
 
-  &:hover {
+  &:is(:hover, :focus-visible) {
     background-color: var(--neutral);
   }
 }

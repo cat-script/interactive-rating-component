@@ -40,8 +40,8 @@ body {
   font-family: var(--ff);
   font-size: var(--fs);
   line-height: 1.5;
-  background-color: hsl(var(--very-dark-blue), .97);
-  color: hsl(var(--white), .5);
+  background-color: var(--very-dark-blue-hsl);
+  color: var(--light-gray-hsl);
   display: grid;
   place-content: center;
 }
@@ -49,8 +49,8 @@ body {
 .container {
   margin-inline: auto;
   width: clamp(17.5rem, 88%, 25rem);
-  background: linear-gradient(hsla(var(--dark-blue), .7), hsla(var(--dark-blue), .5));
-  padding: calc(var(--spacing) + 0.5rem) var(--spacing);
+  background: linear-gradient(hsla(var(--dark-blue), .5), hsla(var(--dark-blue), .25));
+  padding: calc(var(--spacing) + 0.5rem) var(--spacing) var(--spacing);
   border-radius: var(--border-radius);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
@@ -107,10 +107,15 @@ input {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: hsl(var(--light-gray), .06);
+  background-color: hsl(var(--light-gray), .1);
   width: var(--circle-size);
   height: var(--circle-size);
   border-radius: 50%;
+}
+
+.icon {
+  width: calc(var(--circle-size) - 0.25rem);
+  height: calc(var(--circle-size) - 0.25rem);
 }
 
 .submit-btn {
@@ -132,6 +137,7 @@ input {
 .thankyou-state {
   justify-items: center;
   text-align: center;
+  padding-block-end: 0.5rem;
 }
 
 .user-submit {
@@ -146,7 +152,7 @@ input {
   display: none;
 }
 
-@media (min-width: 27.5rem) {
+@media (min-width: 27rem) {
   body {
     --fs: 0.9375rem;
     --circle-size: 3.125rem;
